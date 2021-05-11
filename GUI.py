@@ -25,9 +25,9 @@ class GUI(Frame):
         Checkbutton(root,text="CheckButton#3",variable=c3,background=color).grid(column=3,row=3)
         T=Text(root, height=15, width=70)
         T.grid(column=3,row=7)
-        b1=Button(root,command= lambda: self.login0(T,e1,e2,e3,c1,c2,c3,b1,),text="RUN",background=color)
+        b1=Button(root,command= lambda: self.submit(T,e1,e2,e3,c1,c2,c3,b1,),text="RUN",background=color)
         b1.grid(column=1,row=7)
-    def login0(self,T,e1,e2,e3,c1,c2,c3,b1):
+    def submit(self,T,e1,e2,e3,c1,c2,c3,b1):
         thread_pool_executor.submit(self.main,T,e1,e2,e3,c1,c2,c3,b1)
     def main(self,T,e1,e2,e3,c1,c2,c3,b1):
         #Your Instructions Here
